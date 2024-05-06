@@ -121,6 +121,7 @@ def message_handler(routing_keys,  # type: Union[str, Iterable]
 
         for routing_key in routing_keys:
             queue_name = (settings.QUEUE_NAME_PREFIX + routing_key) if queue is None else queue
+            print ('\n>>> [message_handler] Listenning on queue: {}'.format(queue_name))
 
             # kombu.Consumer has no concept of routing-key (only queue name) so
             # so handler registrations must be unique on queue+exchange (otherwise
