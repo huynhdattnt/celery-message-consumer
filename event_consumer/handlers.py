@@ -142,7 +142,7 @@ def message_handler(routing_keys,  # type: Union[str, Iterable]
                 f.__module__,
                 f.__name__
             )
-            print ('registered: %s to handler: %s.%s' % (register_key, f.__module__, f.__name__))
+            print ('registered: {} to handler: {}.{}'.format(register_key, f.__module__, f.__name__))
 
         return f
 
